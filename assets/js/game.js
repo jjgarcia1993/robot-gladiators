@@ -36,11 +36,12 @@ var enemyAttack = 12;
 //     window.alert("The fight has begun!");
 //   }
 
+window.alert("Welcome to Robot Gladiators!");
 
 // create function
-var fight = function (enemyName) {
+var fight = function(enemyName) {
+
     // Alert players that they are starting the round
-    window.alert("Welcome to Robot Gladiators!");
     var promptFight = window.prompt("Would you like to FIGHT or SKIP tihs battle? Enter 'FIGHT' or 'SKIP' to choose.");
     if (promptFight === "fight" || promptFight === "FIGHT") {
 
@@ -86,15 +87,17 @@ var fight = function (enemyName) {
             // subtract money from playerMoney for skipping
             playerMoney = playerMoney - 2;
         }
-        // if no (false), ask question again by running fight() again
-        else {
-            fight();
-        }
+    }
+
+    // if no (false), ask question again by running fight() again
+    else {
+        fight();
     }
 }
 
 
+
 // execute function
 for (var i = 0; i < enemyNames.length; i++) {
-    fight(enemyNames[i]);
-};
+    fight(enemyNames[i])
+}
